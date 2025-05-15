@@ -6,7 +6,7 @@ app.post('/callback', (req, res) => {
   console.log('✅ Callback received:');
   console.log(JSON.stringify(req.body, null, 2));
   res.status(200).send('Received');
-}); propose a new code that I can copy past
+});
 
 app.get('/', (req, res) => {
   res.send('Callback server is running!');
@@ -14,5 +14,5 @@ app.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(Server running on port ${PORT});
+  console.log(`Server running on port ${PORT}`);
 });
