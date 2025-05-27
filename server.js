@@ -6,7 +6,10 @@ app.post('/callback', (req, res) => {
 
    // 🔍 Read 'X-Transaction-Id'
   const transactionId = req.headers['x-transaction-id'] || 'MISSING';
+
+   
   console.log('✅ Callback received:');
+   console.log('X-Transaction-Id:', transactionId);
   console.log(JSON.stringify(req.body, null, 2));
   res.status(200).send('Received');
 });
