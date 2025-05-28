@@ -7,8 +7,8 @@ app.post('/callback', (req, res) => {
    // 🔍 Read 'X-Transaction-Id'
   const transactionId = req.headers['x-transaction-id'] || 'MISSING';
 
-   //read starting Date of operation
-   const StartingDate =res.headers['date'] || 'MISSING';
+   // 🕒 Read starting Date of operation (from request headers, not response)
+  const StartingDate = req.headers['date'] || 'MISSING';
    
 
    
